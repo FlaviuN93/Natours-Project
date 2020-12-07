@@ -7,9 +7,28 @@
 }
 
 html {
-	font-size: 62.5%;
+	// Order matters. If its max-width, it should be from high to low, because the last one applies.
+	// In this case, if the viewport is 500px, both the tab-land, tab-port and phone apply so the last one being phone that one will work.
+	font-size: 62.5%; // 1rem = 10px, 10 / 16 = 62.5%
+
+	@include respond(tab-land) {
+		font-size: 56.25%; // 1rem = 9px, 9 / 16 = 56.25%
+	}
+
+	@include respond(tab-port) {
+		font-size: 50%; // 1rem = 8px, 8 / 16 = 50%
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%; // 1rem = 12px, 12 / 16 = 75%
+	}
 }
 
 body {
 	box-sizing: border-box;
+	padding: 3rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
 }

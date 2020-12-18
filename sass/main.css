@@ -854,7 +854,6 @@ body {
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
-    text-align: justify;
   }
 }
 
@@ -881,7 +880,7 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
-    border-radius: 0;
+    border-radius: none;
   }
 }
 
@@ -896,6 +895,8 @@ body {
   height: 100%;
   -webkit-transform: translateX(-4rem) scale(1.4);
           transform: translateX(-4rem) scale(1.4);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -923,6 +924,8 @@ body {
   font-size: 1.7rem;
   text-align: center;
   opacity: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

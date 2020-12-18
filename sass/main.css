@@ -1108,6 +1108,7 @@ body {
           transform: translate(-50%, -50%);
   display: table;
   overflow: hidden;
+  visibility: hidden;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%) scale(0.25);
           transform: translate(-50%, -50%) scale(0.25);
@@ -1180,6 +1181,7 @@ body {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
 }
 
 .popup__close:link, .popup__close:visited {

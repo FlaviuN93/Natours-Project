@@ -90,6 +90,7 @@
 				$color-white 50%
 			);
 			background-size: 220%;
+			backface-visibility: hidden;
 			transition: all 0.4s;
 
 			@include respond(phone) {

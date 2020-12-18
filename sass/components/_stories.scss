@@ -1,9 +1,9 @@
 .story {
 	width: 75%;
 	margin: 0 auto;
-	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-	background-color: rgba($color-white, 0.6);
-	border-radius: 3px;
+	box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
+	background-color: rgba($color-white, 0.5);
+	border-radius: $default-border-radius;
 	padding: 6rem;
 	padding-left: 9rem;
 	font-size: $default-font-size;
@@ -29,9 +29,7 @@
 		border-radius: 50%;
 
 		@supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-			-webkit-clip-path: circle(50% at 50% 50%);
 			clip-path: circle(50% at 50% 50%);
-			-webkit-shape-outside: circle(50% at 50% 50%);
 			shape-outside: circle(50% at 50% 50%);
 			border-radius: none;
 		}
@@ -60,14 +58,14 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, 20%);
+		transform: translate(-50%, 0);
 		color: $color-white;
 		text-transform: uppercase;
 		font-size: 1.7rem;
 		text-align: center;
 		opacity: 0;
-		transition: all 0.5s;
 		backface-visibility: hidden;
+		transition: all 0.5s;
 	}
 
 	&:hover &__caption {
@@ -77,6 +75,6 @@
 
 	&:hover &__img {
 		transform: translateX(-4rem) scale(1);
-		filter: blur(3px) brightness(80%);
+		filter: blur(1.5px) brightness(80%);
 	}
 }

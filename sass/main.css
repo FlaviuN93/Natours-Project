@@ -838,9 +838,9 @@ body {
 .story {
   width: 75%;
   margin: 0 auto;
-  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -878,7 +878,7 @@ body {
 @supports ((-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0))) or (-webkit-clip-path: polygon(0 0)) {
   .story__shape {
     -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     border-radius: none;
   }
@@ -917,17 +917,17 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 20%);
-          transform: translate(-50%, 20%);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   color: #fff;
   text-transform: uppercase;
   font-size: 1.7rem;
   text-align: center;
   opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .story:hover .story__caption {
@@ -939,8 +939,8 @@ body {
 .story:hover .story__img {
   -webkit-transform: translateX(-4rem) scale(1);
           transform: translateX(-4rem) scale(1);
-  -webkit-filter: blur(3px) brightness(80%);
-          filter: blur(3px) brightness(80%);
+  -webkit-filter: blur(1.5px) brightness(80%);
+          filter: blur(1.5px) brightness(80%);
 }
 
 .bg-video {
